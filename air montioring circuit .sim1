@@ -1,0 +1,43 @@
+<circuit version="1.1.0-SR2" rev="260312" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="Subcircuit" CircId="Uno-1" mainComp="false" Show_id="true" Show_Val="false" Pos="52,-76" rotation="0" hflip="1" vflip="1" label="Uno-1" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="false">
+<mainCompProps MainCompId="mega328-109" Frequency="16 MHz" Auto_Load="false" saveEepr="true" MainMcu="true" SerialMon="-1" />
+</item>
+
+<item itemtype="Potentiometer" CircId="Potentiometer-2" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="272,-56" rotation="0" hflip="1" vflip="1" label="Potentiometer-2" idLabPos="-16,-40" labelrot="0" valLabPos="15,-20" valLabRot="0" Resistance="1 kΩ" Value_Ohm="1000 Ω" Slider="false" Scale="1" />
+
+<item itemtype="Led" CircId="Led-3" mainComp="false" ShowProp="Color" Show_id="false" Show_Val="true" Pos="-80,40" rotation="0" hflip="-1" vflip="1" label="Led-3" idLabPos="-16,-24" labelrot="0" valLabPos="-8.11522,13.6922" valLabRot="0" Color="Red" Grounded="false" Threshold="1.8 V" MaxCurrent="30 mA" Resistance="0.6 Ω" />
+
+<item itemtype="Led" CircId="Led-4" mainComp="false" ShowProp="Color" Show_id="false" Show_Val="true" Pos="-76,-4" rotation="0" hflip="-1" vflip="1" label="Led-4" idLabPos="-16,-24" labelrot="0" valLabPos="-10.4807,10.5383" valLabRot="0" Color="Green" Grounded="false" Threshold="3.5 V" MaxCurrent="30 mA" Resistance="0.6 Ω" />
+
+<item itemtype="Resistor" CircId="Resistor-5" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-4,-4" rotation="0" hflip="1" vflip="1" label="Resistor-5" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="220 Ω" />
+
+<item itemtype="Resistor" CircId="Resistor-6" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-8,40" rotation="0" hflip="1" vflip="1" label="Resistor-6" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="220 Ω" />
+
+<item itemtype="Dht22" CircId="Dht22-7" mainComp="false" Show_id="false" Show_Val="false" Pos="-40,-148" rotation="0" hflip="1" vflip="1" label="Dht22-7" idLabPos="-28,-32" labelrot="0" valLabPos="-16,20" valLabRot="0" DHT22="DHT22" TempInc="0.5 °C" HumiInc="5 _%" />
+
+<item itemtype="Node" CircId="Node-11" mainComp="false" Pos="-148,40" />
+
+<item itemtype="Connector" uid="Connector-1" startpinid="Dht22-7-inPin" endpinid="Uno-1-2" pointList="-76,-152,-76,-44,60,-44" />
+
+<item itemtype="Connector" uid="Connector-2" startpinid="Potentiometer-2-PinA" endpinid="Uno-1-5V0" pointList="256,-56,244,-56,244,20,204,20" />
+
+<item itemtype="Connector" uid="Connector-7" startpinid="Potentiometer-2-PinM" endpinid="Uno-1-A0" pointList="272,-40,272,-20,204,-20" />
+
+<item itemtype="Connector" uid="Connector-12" startpinid="Potentiometer-2-PinB" endpinid="Uno-1-GND1" pointList="288,-56,288,12,204,12" />
+
+<item itemtype="Connector" uid="Connector-13" startpinid="Uno-1-7" endpinid="Resistor-5-rPin" pointList="60,-4,12,-4" />
+
+<item itemtype="Connector" uid="Connector-14" startpinid="Uno-1-8" endpinid="Resistor-6-rPin" pointList="60,12,24,12,24,40,8,40" />
+
+<item itemtype="Connector" uid="Connector-15" startpinid="Resistor-5-lPin" endpinid="Led-4-lPin" pointList="-20,-4,-60,-4" />
+
+<item itemtype="Connector" uid="Connector-16" startpinid="Led-3-lPin" endpinid="Resistor-6-lPin" pointList="-64,40,-24,40" />
+
+<item itemtype="Connector" uid="Connector-24" startpinid="Node-11-2" endpinid="Uno-1-GND2" pointList="-148,40,-148,88,36,88,36,60,60,60" />
+
+<item itemtype="Connector" uid="Connector-23" startpinid="Led-4-rPin" endpinid="Node-11-0" pointList="-92,-4,-148,-4,-148,40" />
+
+<item itemtype="Connector" uid="Connector-22" startpinid="Led-3-rPin" endpinid="Node-11-1" pointList="-96,40,-148,40" />
+
+</circuit>
